@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <ul>
+    <li>Élément 1</li>
+    <li>Élément 2</li>
+    <li>Élément 3</li>
+</ul>
+
+<button id="toggle-btn">Toggle</button>
+
+<script>
+
+    var toggleBtn = document.getElementById("toggle-btn");
+
+
+    toggleBtn.addEventListener("click", toggleColor);
+
+    function toggleColor() {
+
+        var listItems = document.querySelectorAll("li");
+
+
+        for (var i = 0; i < listItems.length; i++) {
+
+            listItems[i].classList.toggle("red");
+        }
+    }
+</script>
+</body>
+</html>
